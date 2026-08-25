@@ -1,0 +1,19 @@
+{
+  "model": "/home/ma-user/work/step-distillation/output/20251110_233925/final_234/lora",
+  "checkpoint_path": "/home/ma-user/work/step-distillation/output/20251110_233925/final_234/lora",
+  "timestamp": "2025-11-11 19:20:50",
+  "accuracy": 0.67578125,
+  "accuracy_percent": "67.58%",
+  "correct": 173,
+  "total": 256,
+  "avg_block_decode_iterations_per_sample": 27.669902801513672,
+  "hyperparameters": {
+    "max_gen_length": 512,
+    "block_length": 64,
+    "threshold": 0.6,
+    "batch_size": 8,
+    "num_few_shot": 0,
+    "dtype": "bfloat16",
+    "subsample": 256
+  }
+}

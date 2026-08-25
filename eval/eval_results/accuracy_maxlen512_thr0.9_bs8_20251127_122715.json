@@ -1,0 +1,19 @@
+{
+  "model": "/home/ma-user/work/step-distillation/feature-distillation/output/distillation_20251127_000745/checkpoint-272",
+  "checkpoint_path": "/home/ma-user/work/step-distillation/feature-distillation/output/distillation_20251127_000745/checkpoint-272",
+  "timestamp": "2025-11-27 12:50:59",
+  "accuracy": 0.49609375,
+  "accuracy_percent": "49.61%",
+  "correct": 127,
+  "total": 256,
+  "avg_block_decode_iterations_per_sample": 63.56640625,
+  "hyperparameters": {
+    "max_gen_length": 512,
+    "block_length": 64,
+    "threshold": 0.9,
+    "batch_size": 8,
+    "num_few_shot": 0,
+    "dtype": "bfloat16",
+    "subsample": 256
+  }
+}

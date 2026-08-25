@@ -1,0 +1,95 @@
+开始批量评估...
+日志文件: /home/ma-user/work/step-distillation/eval/eval_results/eval_run_20251112_110325.log
+评估配置:
+  Max Gen Lengths: 256 512 1024
+  Thresholds: 0.6 0.9
+  Total evaluations: 6
+================================
+
+========================================
+运行评估 #1/6
+参数: max_gen_length=256, threshold=0.6, batch_size=16
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 16.47it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 21.00it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/peft/tuners/lora/model.py", line 382, in __getattr__
+[rank0]:     return super().__getattr__(name)  # defer to nn.Module's logic
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'LoraModel' object has no attribute 'prepare_inputs_for_generation'
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/ma-user/work/step-distillation/eval/eval.py", line 636, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/ma-user/work/step-distillation/eval/eval.py", line 531, in main
+[rank0]:     model = load_model(
+[rank0]:   File "/home/ma-user/work/step-distillation/eval/eval.py", line 205, in load_model
+[rank0]:     peft_model = PeftModel.from_pretrained(base_model, checkpoint_path)
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/peft/peft_model.py", line 547, in from_pretrained
+[rank0]:     model = MODEL_TYPE_TO_PEFT_MODEL_MAPPING[config.task_type](
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/peft/peft_model.py", line 1816, in __init__
+[rank0]:     self.base_model_prepare_inputs_for_generation = self.base_model.prepare_inputs_for_generation
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/peft/tuners/lora/model.py", line 386, in __getattr__
+[rank0]:     return getattr(self.model, name)
+[rank0]:   File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1931, in __getattr__
+[rank0]:     raise AttributeError(
+[rank0]: AttributeError: 'LLaDAModelLM' object has no attribute 'prepare_inputs_for_generation'
+[ERROR] 2025-11-12-11:04:02 (PID:21046, Device:0, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+E1112 11:04:07.091361 20793 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 21046) of binary: /home/ma-user/work/conda/env/step-distillation/bin/python3.1
+Traceback (most recent call last):
+  File "/home/ma-user/work/conda/env/step-distillation/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/ma-user/work/step-distillation/eval/eval.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-12_11:04:07
+  host      : notebook-f3b1a228-ee25-4c4e-b167-88ea79e0659b.notebook-f3b1a228-ee25-4c4e-b167-88ea79e0659b-distributed.default.svc.cluster.local
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 21046)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[ERROR] 2025-11-12-11:04:07 (PID:20793, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+✓ 评估 #1 完成！
+
+========================================
+运行评估 #2/6
+参数: max_gen_length=256, threshold=0.9, batch_size=16
+----------------------------------------

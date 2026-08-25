@@ -1,0 +1,299 @@
+开始批量评估...
+日志文件: /home/ma-user/work/step-distillation/eval/eval_results/eval_run_20251112_110558.log
+评估配置:
+  Max Gen Lengths: 256 512 1024
+  Thresholds: 0.6 0.9
+  Total evaluations: 6
+================================
+
+========================================
+运行评估 #1/6
+参数: max_gen_length=256, threshold=0.6, batch_size=16
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  5.99it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.48it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.86it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.68it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]Evaluating:   6%|▋         | 1/16 [00:18<04:42, 18.83s/it]Evaluating:  12%|█▎        | 2/16 [00:33<03:50, 16.45s/it]Evaluating:  19%|█▉        | 3/16 [00:48<03:27, 15.93s/it]Evaluating:  25%|██▌       | 4/16 [01:05<03:15, 16.33s/it]Evaluating:  31%|███▏      | 5/16 [01:21<02:58, 16.23s/it]Evaluating:  38%|███▊      | 6/16 [01:36<02:37, 15.71s/it]Evaluating:  44%|████▍     | 7/16 [01:53<02:24, 16.00s/it]Evaluating:  50%|█████     | 8/16 [02:08<02:07, 15.92s/it]Evaluating:  56%|█████▋    | 9/16 [02:26<01:54, 16.32s/it]Evaluating:  62%|██████▎   | 10/16 [02:44<01:40, 16.83s/it]Evaluating:  69%|██████▉   | 11/16 [03:00<01:22, 16.60s/it]Evaluating:  75%|███████▌  | 12/16 [03:14<01:04, 16.01s/it]Evaluating:  81%|████████▏ | 13/16 [03:29<00:46, 15.57s/it]Evaluating:  88%|████████▊ | 14/16 [03:47<00:32, 16.19s/it]Evaluating:  94%|█████████▍| 15/16 [04:06<00:17, 17.08s/it]Evaluating: 100%|██████████| 16/16 [04:22<00:00, 16.72s/it]Evaluating: 100%|██████████| 16/16 [04:22<00:00, 16.38s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen256_thr0.6_bs16_20251112_110558.jsonl_rank*
+Accuracy: 49.22% (126/256)
+Avg block decode iterations per sample: 29.203
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen256_thr0.6_bs16_20251112_110558.json
+✓ 评估 #1 完成！
+
+========================================
+运行评估 #2/6
+参数: max_gen_length=256, threshold=0.9, batch_size=16
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  7.39it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  6.05it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.82it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.93it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]Evaluating:   6%|▋         | 1/16 [00:27<06:54, 27.62s/it]Evaluating:  12%|█▎        | 2/16 [00:51<05:55, 25.39s/it]Evaluating:  19%|█▉        | 3/16 [01:16<05:28, 25.30s/it]Evaluating:  25%|██▌       | 4/16 [01:44<05:17, 26.48s/it]Evaluating:  31%|███▏      | 5/16 [02:12<04:54, 26.81s/it]Evaluating:  38%|███▊      | 6/16 [02:36<04:20, 26.03s/it]Evaluating:  44%|████▍     | 7/16 [03:05<04:03, 27.03s/it]Evaluating:  50%|█████     | 8/16 [03:33<03:38, 27.33s/it]Evaluating:  56%|█████▋    | 9/16 [04:01<03:12, 27.51s/it]Evaluating:  62%|██████▎   | 10/16 [04:29<02:44, 27.46s/it]Evaluating:  69%|██████▉   | 11/16 [04:57<02:18, 27.64s/it]Evaluating:  75%|███████▌  | 12/16 [05:22<01:47, 26.94s/it]Evaluating:  81%|████████▏ | 13/16 [05:47<01:19, 26.41s/it]Evaluating:  88%|████████▊ | 14/16 [06:14<00:52, 26.49s/it]Evaluating:  94%|█████████▍| 15/16 [06:28<00:22, 22.60s/it]Evaluating: 100%|██████████| 16/16 [06:55<00:00, 24.09s/it]Evaluating: 100%|██████████| 16/16 [06:55<00:00, 25.97s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen256_thr0.9_bs16_20251112_111200.jsonl_rank*
+Accuracy: 48.83% (125/256)
+Avg block decode iterations per sample: 48.125
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen256_thr0.9_bs16_20251112_111200.json
+✓ 评估 #2 完成！
+
+========================================
+运行评估 #3/6
+参数: max_gen_length=512, threshold=0.6, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  7.63it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  6.14it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.95it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  8.10it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:21<11:15, 21.79s/it]Evaluating:   6%|▋         | 2/32 [00:34<08:09, 16.32s/it]Evaluating:   9%|▉         | 3/32 [00:51<08:02, 16.65s/it]Evaluating:  12%|█▎        | 4/32 [01:06<07:29, 16.05s/it]Evaluating:  16%|█▌        | 5/32 [01:22<07:17, 16.20s/it]Evaluating:  19%|█▉        | 6/32 [01:38<06:55, 16.00s/it]Evaluating:  22%|██▏       | 7/32 [01:55<06:49, 16.37s/it]Evaluating:  25%|██▌       | 8/32 [02:11<06:31, 16.31s/it]Evaluating:  28%|██▊       | 9/32 [02:28<06:17, 16.40s/it]Evaluating:  31%|███▏      | 10/32 [02:43<05:52, 16.02s/it]Evaluating:  34%|███▍      | 11/32 [03:01<05:49, 16.65s/it]Evaluating:  38%|███▊      | 12/32 [03:19<05:37, 16.87s/it]Evaluating:  41%|████      | 13/32 [03:38<05:33, 17.53s/it]Evaluating:  44%|████▍     | 14/32 [03:55<05:13, 17.41s/it]Evaluating:  47%|████▋     | 15/32 [04:10<04:46, 16.87s/it]Evaluating:  50%|█████     | 16/32 [04:28<04:33, 17.07s/it]Evaluating:  53%|█████▎    | 17/32 [04:44<04:09, 16.65s/it]Evaluating:  56%|█████▋    | 18/32 [05:03<04:03, 17.36s/it]Evaluating:  59%|█████▉    | 19/32 [05:24<04:01, 18.59s/it]Evaluating:  62%|██████▎   | 20/32 [05:41<03:38, 18.22s/it]Evaluating:  66%|██████▌   | 21/32 [06:03<03:32, 19.36s/it]Evaluating:  69%|██████▉   | 22/32 [06:22<03:12, 19.27s/it]Evaluating:  72%|███████▏  | 23/32 [06:39<02:45, 18.42s/it]Evaluating:  75%|███████▌  | 24/32 [06:54<02:19, 17.40s/it]Evaluating:  78%|███████▊  | 25/32 [07:10<01:59, 17.06s/it]Evaluating:  81%|████████▏ | 26/32 [07:26<01:39, 16.59s/it]Evaluating:  84%|████████▍ | 27/32 [07:32<01:07, 13.55s/it]Evaluating:  88%|████████▊ | 28/32 [07:42<00:49, 12.34s/it]Evaluating:  91%|█████████ | 29/32 [07:50<00:33, 11.24s/it]Evaluating:  94%|█████████▍| 30/32 [08:02<00:22, 11.23s/it]Evaluating:  97%|█████████▋| 31/32 [08:12<00:11, 11.11s/it]Evaluating: 100%|██████████| 32/32 [08:27<00:00, 12.09s/it]Evaluating: 100%|██████████| 32/32 [08:27<00:00, 15.85s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen512_thr0.6_bs8_20251112_112033.jsonl_rank*
+Accuracy: 69.53% (178/256)
+Avg block decode iterations per sample: 27.052
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen512_thr0.6_bs8_20251112_112033.json
+✓ 评估 #3 完成！
+
+========================================
+运行评估 #4/6
+参数: max_gen_length=512, threshold=0.9, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.25it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.73it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  6.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.98it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:24<12:38, 24.47s/it]Evaluating:   6%|▋         | 2/32 [00:54<14:00, 28.01s/it]Evaluating:   9%|▉         | 3/32 [01:22<13:30, 27.97s/it]Evaluating:  12%|█▎        | 4/32 [01:53<13:28, 28.88s/it]Evaluating:  16%|█▌        | 5/32 [02:18<12:25, 27.61s/it]Evaluating:  19%|█▉        | 6/32 [02:46<12:01, 27.74s/it]Evaluating:  22%|██▏       | 7/32 [02:54<08:50, 21.22s/it]Evaluating:  25%|██▌       | 8/32 [03:22<09:23, 23.46s/it]Evaluating:  28%|██▊       | 9/32 [03:36<07:48, 20.38s/it]Evaluating:  31%|███▏      | 10/32 [04:03<08:18, 22.64s/it]Evaluating:  34%|███▍      | 11/32 [04:32<08:36, 24.61s/it]Evaluating:  38%|███▊      | 12/32 [05:04<08:51, 26.60s/it]Evaluating:  41%|████      | 13/32 [05:32<08:34, 27.09s/it]Evaluating:  44%|████▍     | 14/32 [06:00<08:13, 27.43s/it]Evaluating:  47%|████▋     | 15/32 [06:29<07:53, 27.86s/it]Evaluating:  50%|█████     | 16/32 [06:57<07:26, 27.89s/it]Evaluating:  53%|█████▎    | 17/32 [07:10<05:51, 23.46s/it]Evaluating:  56%|█████▋    | 18/32 [07:39<05:50, 25.01s/it]Evaluating:  59%|█████▉    | 19/32 [08:10<05:49, 26.87s/it]Evaluating:  62%|██████▎   | 20/32 [08:38<05:25, 27.16s/it]Evaluating:  66%|██████▌   | 21/32 [08:53<04:19, 23.58s/it]Evaluating:  69%|██████▉   | 22/32 [09:24<04:18, 25.87s/it]Evaluating:  72%|███████▏  | 23/32 [09:51<03:54, 26.09s/it]Evaluating:  75%|███████▌  | 24/32 [10:13<03:20, 25.00s/it]Evaluating:  78%|███████▊  | 25/32 [10:43<03:06, 26.59s/it]Evaluating:  81%|████████▏ | 26/32 [11:11<02:40, 26.80s/it]Evaluating:  84%|████████▍ | 27/32 [11:29<02:01, 24.33s/it]Evaluating:  88%|████████▊ | 28/32 [11:58<01:43, 25.77s/it]Evaluating:  91%|█████████ | 29/32 [12:07<01:01, 20.57s/it]Evaluating:  94%|█████████▍| 30/32 [12:34<00:44, 22.45s/it]Evaluating:  97%|█████████▋| 31/32 [12:49<00:20, 20.18s/it]Evaluating: 100%|██████████| 32/32 [13:16<00:00, 22.30s/it]Evaluating: 100%|██████████| 32/32 [13:16<00:00, 24.89s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen512_thr0.9_bs8_20251112_113038.jsonl_rank*
+Accuracy: 70.70% (181/256)
+Avg block decode iterations per sample: 44.739
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen512_thr0.9_bs8_20251112_113038.json
+✓ 评估 #4 完成！
+
+========================================
+运行评估 #5/6
+参数: max_gen_length=1024, threshold=0.6, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.61it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.93it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.63it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.63it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:22<11:36, 22.48s/it]Evaluating:   6%|▋         | 2/32 [00:35<08:25, 16.84s/it]Evaluating:   9%|▉         | 3/32 [01:14<13:05, 27.09s/it]Evaluating:  12%|█▎        | 4/32 [01:55<15:11, 32.54s/it]Evaluating:  16%|█▌        | 5/32 [02:12<12:03, 26.79s/it]Evaluating:  19%|█▉        | 6/32 [02:53<13:43, 31.67s/it]Evaluating:  22%|██▏       | 7/32 [03:24<13:08, 31.54s/it]Evaluating:  25%|██▌       | 8/32 [03:55<12:29, 31.23s/it]Evaluating:  28%|██▊       | 9/32 [04:46<14:19, 37.37s/it]Evaluating:  31%|███▏      | 10/32 [05:13<12:34, 34.28s/it]Evaluating:  34%|███▍      | 11/32 [05:57<13:00, 37.18s/it]Evaluating:  38%|███▊      | 12/32 [06:16<10:35, 31.75s/it]Evaluating:  41%|████      | 13/32 [06:35<08:52, 28.04s/it]Evaluating:  44%|████▍     | 14/32 [07:12<09:09, 30.55s/it]Evaluating:  47%|████▋     | 15/32 [07:42<08:35, 30.31s/it]Evaluating:  50%|█████     | 16/32 [08:18<08:33, 32.12s/it]Evaluating:  53%|█████▎    | 17/32 [08:49<07:55, 31.71s/it]Evaluating:  56%|█████▋    | 18/32 [09:25<07:42, 33.03s/it]Evaluating:  59%|█████▉    | 19/32 [10:01<07:23, 34.09s/it]Evaluating:  62%|██████▎   | 20/32 [10:43<07:16, 36.37s/it]Evaluating:  66%|██████▌   | 21/32 [11:34<07:29, 40.89s/it]Evaluating:  69%|██████▉   | 22/32 [12:07<06:24, 38.45s/it]Evaluating:  72%|███████▏  | 23/32 [12:40<05:31, 36.85s/it]Evaluating:  75%|███████▌  | 24/32 [12:58<04:09, 31.16s/it]Evaluating:  78%|███████▊  | 25/32 [13:36<03:51, 33.06s/it]Evaluating:  81%|████████▏ | 26/32 [14:13<03:25, 34.33s/it]Evaluating:  84%|████████▍ | 27/32 [14:22<02:14, 26.89s/it]Evaluating:  88%|████████▊ | 28/32 [14:32<01:26, 21.70s/it]Evaluating:  91%|█████████ | 29/32 [14:45<00:57, 19.01s/it]Evaluating:  94%|█████████▍| 30/32 [14:56<00:33, 16.79s/it]Evaluating:  97%|█████████▋| 31/32 [15:12<00:16, 16.41s/it]Evaluating: 100%|██████████| 32/32 [15:52<00:00, 23.41s/it]Evaluating: 100%|██████████| 32/32 [15:52<00:00, 29.76s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen1024_thr0.6_bs8_20251112_114534.jsonl_rank*
+Accuracy: 69.92% (179/256)
+Avg block decode iterations per sample: 25.468
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen1024_thr0.6_bs8_20251112_114534.json
+✓ 评估 #5 完成！
+
+========================================
+运行评估 #6/6
+参数: max_gen_length=1024, threshold=0.9, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.90it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.91it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.71it/s]
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+LLaDAModelLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly defined. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:25<13:10, 25.51s/it]Evaluating:   6%|▋         | 2/32 [01:18<20:52, 41.76s/it]Evaluating:   9%|▉         | 3/32 [02:22<25:01, 51.78s/it]Evaluating:  12%|█▎        | 4/32 [02:53<20:18, 43.51s/it]Evaluating:  16%|█▌        | 5/32 [03:18<16:40, 37.05s/it]Evaluating:  19%|█▉        | 6/32 [04:27<20:43, 47.84s/it]Evaluating:  22%|██▏       | 7/32 [04:35<14:31, 34.84s/it]Evaluating:  25%|██▌       | 8/32 [05:33<16:54, 42.28s/it]Evaluating:  28%|██▊       | 9/32 [05:48<12:50, 33.49s/it]Evaluating:  31%|███▏      | 10/32 [06:16<11:42, 31.95s/it]Evaluating:  34%|███▍      | 11/32 [07:31<15:47, 45.11s/it]Evaluating:  38%|███▊      | 12/32 [08:38<17:12, 51.65s/it]Evaluating:  41%|████      | 13/32 [09:46<17:57, 56.72s/it]Evaluating:  44%|████▍     | 14/32 [10:31<15:56, 53.16s/it]Evaluating:  47%|████▋     | 15/32 [11:00<13:02, 46.02s/it]Evaluating:  50%|█████     | 16/32 [11:55<12:57, 48.60s/it]Evaluating:  53%|█████▎    | 17/32 [12:09<09:32, 38.16s/it]Evaluating:  56%|█████▋    | 18/32 [13:17<11:00, 47.16s/it]Evaluating:  59%|█████▉    | 19/32 [14:31<11:56, 55.11s/it]Evaluating:  62%|██████▎   | 20/32 [15:46<12:14, 61.22s/it]Evaluating:  66%|██████▌   | 21/32 [16:02<08:43, 47.61s/it]Evaluating:  69%|██████▉   | 22/32 [16:54<08:08, 48.84s/it]Evaluating:  72%|███████▏  | 23/32 [17:40<07:13, 48.17s/it]Evaluating:  75%|███████▌  | 24/32 [18:03<05:24, 40.57s/it]Evaluating:  78%|███████▊  | 25/32 [19:16<05:51, 50.25s/it]Evaluating:  81%|████████▏ | 26/32 [20:17<05:20, 53.39s/it]Evaluating:  84%|████████▍ | 27/32 [20:42<03:45, 45.06s/it]Evaluating:  88%|████████▊ | 28/32 [21:34<03:07, 46.96s/it]Evaluating:  91%|█████████ | 29/32 [21:46<01:49, 36.51s/it]Evaluating:  94%|█████████▍| 30/32 [22:13<01:07, 33.79s/it]Evaluating:  97%|█████████▋| 31/32 [22:34<00:29, 29.91s/it]Evaluating: 100%|██████████| 32/32 [23:50<00:00, 43.66s/it]Evaluating: 100%|██████████| 32/32 [23:50<00:00, 44.70s/it]
+Model evaluated: /home/ma-user/work/step-distillation/output/distillation_20251111_235854/checkpoint-320
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen1024_thr0.9_bs8_20251112_120304.jsonl_rank*
+Accuracy: 71.48% (183/256)
+Avg block decode iterations per sample: 42.610
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen1024_thr0.9_bs8_20251112_120304.json
+✓ 评估 #6 完成！
+
+========================================
+所有评估完成！
+总计完成: 6/6 个评估
+结果保存在: /home/ma-user/work/step-distillation/eval/eval_results
+========================================
+
+生成结果汇总...
+汇总文件已保存: /home/ma-user/work/step-distillation/eval/eval_results/evaluation_summary_20251112_122835.txt
+评估结果汇总
+评估时间: Wed Nov 12 12:28:35 CST 2025
+========================================
+
+Max Gen Length: 256
+----------------------------------------
+  Threshold 0.6: 49.22% | Avg Loops: 29.203125
+  Threshold 0.9: 48.83% | Avg Loops: 48.125
+
+Max Gen Length: 512
+----------------------------------------
+  Threshold 0.6: 69.53% | Avg Loops: 27.05245590209961
+  Threshold 0.9: 70.70% | Avg Loops: 44.73906326293945
+
+Max Gen Length: 1024
+----------------------------------------
+  Threshold 0.6: 69.92% | Avg Loops: 25.467819213867188
+  Threshold 0.9: 71.48% | Avg Loops: 42.609622955322266
+

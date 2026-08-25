@@ -1,0 +1,227 @@
+开始批量评估...
+日志文件: /home/ma-user/work/step-distillation/eval/eval_results/eval_run_20251111_152800.log
+评估配置:
+  Max Gen Lengths: 256 512 1024
+  Thresholds: 0.6 0.9
+  Total evaluations: 6
+================================
+
+========================================
+运行评估 #1/6
+参数: max_gen_length=256, threshold=0.6, batch_size=16
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.01it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.92it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.79it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.72it/s]
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]Evaluating:   6%|▋         | 1/16 [00:19<04:59, 19.97s/it]Evaluating:  12%|█▎        | 2/16 [00:35<04:03, 17.41s/it]Evaluating:  19%|█▉        | 3/16 [00:49<03:25, 15.84s/it]Evaluating:  25%|██▌       | 4/16 [01:05<03:11, 15.97s/it]Evaluating:  31%|███▏      | 5/16 [01:22<02:59, 16.31s/it]Evaluating:  38%|███▊      | 6/16 [01:39<02:44, 16.47s/it]Evaluating:  44%|████▍     | 7/16 [01:55<02:26, 16.25s/it]Evaluating:  50%|█████     | 8/16 [02:12<02:12, 16.55s/it]Evaluating:  56%|█████▋    | 9/16 [02:26<01:51, 15.93s/it]Evaluating:  62%|██████▎   | 10/16 [02:42<01:35, 15.86s/it]Evaluating:  69%|██████▉   | 11/16 [02:58<01:19, 15.93s/it]Evaluating:  75%|███████▌  | 12/16 [03:14<01:03, 15.81s/it]Evaluating:  81%|████████▏ | 13/16 [03:31<00:48, 16.21s/it]Evaluating:  88%|████████▊ | 14/16 [03:48<00:33, 16.50s/it]Evaluating:  94%|█████████▍| 15/16 [04:08<00:17, 17.55s/it]Evaluating: 100%|██████████| 16/16 [04:24<00:00, 17.05s/it]Evaluating: 100%|██████████| 16/16 [04:24<00:00, 16.53s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen256_thr0.6_bs16_20251111_152800.jsonl_rank*
+Accuracy: 47.27% (121/256)
+Avg block decode iterations per sample: 29.375
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen256_thr0.6_bs16_20251111_152800.json
+✓ 评估 #1 完成！
+
+========================================
+运行评估 #2/6
+参数: max_gen_length=256, threshold=0.9, batch_size=16
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.12it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.63it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.88it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.75it/s]
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]Evaluating:   6%|▋         | 1/16 [00:27<06:50, 27.37s/it]Evaluating:  12%|█▎        | 2/16 [00:50<05:49, 24.99s/it]Evaluating:  19%|█▉        | 3/16 [01:16<05:28, 25.27s/it]Evaluating:  25%|██▌       | 4/16 [01:45<05:20, 26.69s/it]Evaluating:  31%|███▏      | 5/16 [02:12<04:54, 26.81s/it]Evaluating:  38%|███▊      | 6/16 [02:37<04:23, 26.39s/it]Evaluating:  44%|████▍     | 7/16 [03:05<04:00, 26.76s/it]Evaluating:  50%|█████     | 8/16 [03:33<03:36, 27.07s/it]Evaluating:  56%|█████▋    | 9/16 [03:58<03:05, 26.55s/it]Evaluating:  62%|██████▎   | 10/16 [04:22<02:35, 25.90s/it]Evaluating:  69%|██████▉   | 11/16 [04:48<02:09, 25.91s/it]Evaluating:  75%|███████▌  | 12/16 [05:13<01:42, 25.53s/it]Evaluating:  81%|████████▏ | 13/16 [05:39<01:17, 25.74s/it]Evaluating:  88%|████████▊ | 14/16 [06:05<00:51, 25.72s/it]Evaluating:  94%|█████████▍| 15/16 [06:34<00:26, 26.85s/it]Evaluating: 100%|██████████| 16/16 [06:58<00:00, 25.95s/it]Evaluating: 100%|██████████| 16/16 [06:58<00:00, 26.17s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen256_thr0.9_bs16_20251111_153357.jsonl_rank*
+Accuracy: 52.73% (135/256)
+Avg block decode iterations per sample: 46.734
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen256_thr0.9_bs16_20251111_153357.json
+✓ 评估 #2 完成！
+
+========================================
+运行评估 #3/6
+参数: max_gen_length=512, threshold=0.6, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  5.91it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.44it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.21it/s]
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:20<10:33, 20.43s/it]Evaluating:   6%|▋         | 2/32 [00:32<07:54, 15.80s/it]Evaluating:   9%|▉         | 3/32 [00:51<08:08, 16.84s/it]Evaluating:  12%|█▎        | 4/32 [01:08<08:01, 17.20s/it]Evaluating:  16%|█▌        | 5/32 [01:24<07:26, 16.52s/it]Evaluating:  19%|█▉        | 6/32 [01:37<06:38, 15.32s/it]Evaluating:  22%|██▏       | 7/32 [01:59<07:16, 17.47s/it]Evaluating:  25%|██▌       | 8/32 [02:15<06:52, 17.20s/it]Evaluating:  28%|██▊       | 9/32 [02:32<06:35, 17.21s/it]Evaluating:  31%|███▏      | 10/32 [02:50<06:18, 17.19s/it]Evaluating:  34%|███▍      | 11/32 [03:00<05:18, 15.18s/it]Evaluating:  38%|███▊      | 12/32 [03:17<05:16, 15.82s/it]Evaluating:  41%|████      | 13/32 [03:28<04:28, 14.15s/it]Evaluating:  44%|████▍     | 14/32 [03:45<04:29, 14.95s/it]Evaluating:  47%|████▋     | 15/32 [04:03<04:31, 15.97s/it]Evaluating:  50%|█████     | 16/32 [04:13<03:49, 14.32s/it]Evaluating:  53%|█████▎    | 17/32 [04:32<03:54, 15.62s/it]Evaluating:  56%|█████▋    | 18/32 [04:47<03:35, 15.39s/it]Evaluating:  59%|█████▉    | 19/32 [05:06<03:36, 16.65s/it]Evaluating:  62%|██████▎   | 20/32 [05:25<03:27, 17.27s/it]Evaluating:  66%|██████▌   | 21/32 [05:42<03:08, 17.15s/it]Evaluating:  69%|██████▉   | 22/32 [06:03<03:03, 18.37s/it]Evaluating:  72%|███████▏  | 23/32 [06:20<02:41, 18.00s/it]Evaluating:  75%|███████▌  | 24/32 [06:31<02:07, 15.88s/it]Evaluating:  78%|███████▊  | 25/32 [06:48<01:52, 16.11s/it]Evaluating:  81%|████████▏ | 26/32 [07:06<01:40, 16.73s/it]Evaluating:  84%|████████▍ | 27/32 [07:24<01:25, 17.17s/it]Evaluating:  88%|████████▊ | 28/32 [07:39<01:05, 16.30s/it]Evaluating:  91%|█████████ | 29/32 [08:00<00:53, 17.96s/it]Evaluating:  94%|█████████▍| 30/32 [08:20<00:36, 18.45s/it]Evaluating:  97%|█████████▋| 31/32 [08:38<00:18, 18.35s/it]Evaluating: 100%|██████████| 32/32 [09:02<00:00, 20.13s/it]Evaluating: 100%|██████████| 32/32 [09:02<00:00, 16.97s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen512_thr0.6_bs8_20251111_154228.jsonl_rank*
+Accuracy: 68.75% (176/256)
+Avg block decode iterations per sample: 27.998
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen512_thr0.6_bs8_20251111_154228.json
+✓ 评估 #3 完成！
+
+========================================
+运行评估 #4/6
+参数: max_gen_length=512, threshold=0.9, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  5.72it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.29it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.43it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.20it/s]
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:30<15:45, 30.51s/it]Evaluating:   6%|▋         | 2/32 [01:00<15:11, 30.39s/it]Evaluating:   9%|▉         | 3/32 [01:28<14:03, 29.09s/it]Evaluating:  12%|█▎        | 4/32 [01:56<13:22, 28.66s/it]Evaluating:  16%|█▌        | 5/32 [02:11<10:41, 23.76s/it]Evaluating:  19%|█▉        | 6/32 [02:41<11:10, 25.78s/it]Evaluating:  22%|██▏       | 7/32 [03:13<11:35, 27.84s/it]Evaluating:  25%|██▌       | 8/32 [03:26<09:20, 23.35s/it]Evaluating:  28%|██▊       | 9/32 [03:45<08:25, 22.00s/it]Evaluating:  31%|███▏      | 10/32 [04:15<08:55, 24.32s/it]Evaluating:  34%|███▍      | 11/32 [04:41<08:39, 24.76s/it]Evaluating:  38%|███▊      | 12/32 [05:11<08:49, 26.47s/it]Evaluating:  41%|████      | 13/32 [05:41<08:40, 27.38s/it]Evaluating:  44%|████▍     | 14/32 [06:09<08:16, 27.59s/it]Evaluating:  47%|████▋     | 15/32 [06:39<08:05, 28.54s/it]Evaluating:  50%|█████     | 16/32 [07:09<07:41, 28.85s/it]Evaluating:  53%|█████▎    | 17/32 [07:39<07:19, 29.30s/it]Evaluating:  56%|█████▋    | 18/32 [08:04<06:30, 27.93s/it]Evaluating:  59%|█████▉    | 19/32 [08:35<06:14, 28.83s/it]Evaluating:  62%|██████▎   | 20/32 [09:00<05:32, 27.74s/it]Evaluating:  66%|██████▌   | 21/32 [09:13<04:17, 23.40s/it]Evaluating:  69%|██████▉   | 22/32 [09:28<03:26, 20.64s/it]Evaluating:  72%|███████▏  | 23/32 [09:56<03:25, 22.81s/it]Evaluating:  75%|███████▌  | 24/32 [10:24<03:15, 24.50s/it]Evaluating:  78%|███████▊  | 25/32 [10:45<02:44, 23.49s/it]Evaluating:  81%|████████▏ | 26/32 [11:11<02:24, 24.14s/it]Evaluating:  84%|████████▍ | 27/32 [11:40<02:07, 25.51s/it]Evaluating:  88%|████████▊ | 28/32 [12:07<01:44, 26.06s/it]Evaluating:  91%|█████████ | 29/32 [12:15<01:01, 20.60s/it]Evaluating:  94%|█████████▍| 30/32 [12:33<00:39, 19.81s/it]Evaluating:  97%|█████████▋| 31/32 [12:56<00:20, 20.93s/it]Evaluating: 100%|██████████| 32/32 [13:11<00:00, 19.09s/it]Evaluating: 100%|██████████| 32/32 [13:11<00:00, 24.74s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen512_thr0.9_bs8_20251111_155304.jsonl_rank*
+Accuracy: 74.61% (191/256)
+Avg block decode iterations per sample: 44.634
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen512_thr0.9_bs8_20251111_155304.json
+✓ 评估 #4 完成！
+
+========================================
+运行评估 #5/6
+参数: max_gen_length=1024, threshold=0.6, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.92it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.78it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  5.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  7.68it/s]
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:48<25:09, 48.71s/it]Evaluating:   6%|▋         | 2/32 [01:01<13:40, 27.37s/it]Evaluating:   9%|▉         | 3/32 [01:27<12:56, 26.78s/it]Evaluating:  12%|█▎        | 4/32 [02:05<14:33, 31.19s/it]Evaluating:  16%|█▌        | 5/32 [02:20<11:25, 25.39s/it]Evaluating:  19%|█▉        | 6/32 [02:33<09:08, 21.08s/it]Evaluating:  22%|██▏       | 7/32 [03:30<13:44, 32.97s/it]Evaluating:  25%|██▌       | 8/32 [04:08<13:47, 34.47s/it]Evaluating:  28%|██▊       | 9/32 [04:52<14:22, 37.52s/it]Evaluating:  31%|███▏      | 10/32 [05:39<14:50, 40.50s/it]Evaluating:  34%|███▍      | 11/32 [05:50<10:58, 31.37s/it]Evaluating:  38%|███▊      | 12/32 [06:35<11:52, 35.64s/it]Evaluating:  41%|████      | 13/32 [06:45<08:50, 27.92s/it]Evaluating:  44%|████▍     | 14/32 [07:14<08:25, 28.11s/it]Evaluating:  47%|████▋     | 15/32 [08:00<09:30, 33.57s/it]Evaluating:  50%|█████     | 16/32 [08:10<07:05, 26.61s/it]Evaluating:  53%|█████▎    | 17/32 [08:36<06:34, 26.28s/it]Evaluating:  56%|█████▋    | 18/32 [08:51<05:19, 22.79s/it]Evaluating:  59%|█████▉    | 19/32 [09:10<04:43, 21.78s/it]Evaluating:  62%|██████▎   | 20/32 [09:58<05:53, 29.48s/it]Evaluating:  66%|██████▌   | 21/32 [10:33<05:43, 31.19s/it]Evaluating:  69%|██████▉   | 22/32 [11:25<06:14, 37.48s/it]Evaluating:  72%|███████▏  | 23/32 [11:58<05:26, 36.32s/it]Evaluating:  75%|███████▌  | 24/32 [12:09<03:49, 28.65s/it]Evaluating:  78%|███████▊  | 25/32 [12:40<03:24, 29.25s/it]Evaluating:  81%|████████▏ | 26/32 [13:17<03:08, 31.50s/it]Evaluating:  84%|████████▍ | 27/32 [13:46<02:33, 30.78s/it]Evaluating:  88%|████████▊ | 28/32 [14:24<02:12, 33.02s/it]Evaluating:  91%|█████████ | 29/32 [15:24<02:03, 41.08s/it]Evaluating:  94%|█████████▍| 30/32 [16:04<01:21, 40.76s/it]Evaluating:  97%|█████████▋| 31/32 [16:27<00:35, 35.55s/it]Evaluating: 100%|██████████| 32/32 [17:35<00:00, 45.19s/it]Evaluating: 100%|██████████| 32/32 [17:35<00:00, 32.98s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen1024_thr0.6_bs8_20251111_160747.jsonl_rank*
+Accuracy: 71.09% (182/256)
+Avg block decode iterations per sample: 27.183
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen1024_thr0.6_bs8_20251111_160747.json
+✓ 评估 #5 完成！
+
+========================================
+运行评估 #6/6
+参数: max_gen_length=1024, threshold=0.9, batch_size=8
+----------------------------------------
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/latest owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+/home/ma-user/work/conda/env/step-distillation/lib/python3.10/site-packages/torch_npu/utils/collect_env.py:58: UserWarning: Warning: The /usr/local/Ascend/ascend-toolkit/8.1.RC1/aarch64-linux/ascend_toolkit_install.info owner does not match the current owner.
+  warnings.warn(f"Warning: The {path} owner does not match the current owner.")
+evaluating 256 examples
+The argument `trust_remote_code` is to be used with Auto classes. It has no effect here and is ignored.
+config.flash_attention 为 True，但 flash_attn_func 未安装（fla3、fla2均未找到）
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  7.35it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  5.96it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  6.25it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  8.32it/s]
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]Evaluating:   3%|▎         | 1/32 [00:39<20:28, 39.62s/it]Evaluating:   6%|▋         | 2/32 [01:31<23:20, 46.68s/it]Evaluating:   9%|▉         | 3/32 [02:46<28:52, 59.73s/it]Evaluating:  12%|█▎        | 4/32 [03:30<24:54, 53.37s/it]Evaluating:  16%|█▌        | 5/32 [03:44<17:40, 39.27s/it]Evaluating:  19%|█▉        | 6/32 [04:55<21:38, 49.95s/it]Evaluating:  22%|██▏       | 7/32 [05:26<18:19, 44.00s/it]Evaluating:  25%|██▌       | 8/32 [05:40<13:44, 34.35s/it]Evaluating:  28%|██▊       | 9/32 [05:59<11:21, 29.62s/it]Evaluating:  31%|███▏      | 10/32 [07:17<16:19, 44.51s/it]Evaluating:  34%|███▍      | 11/32 [08:06<16:00, 45.72s/it]Evaluating:  38%|███▊      | 12/32 [08:53<15:22, 46.13s/it]Evaluating:  41%|████      | 13/32 [09:34<14:08, 44.64s/it]Evaluating:  44%|████▍     | 14/32 [10:19<13:28, 44.93s/it]Evaluating:  47%|████▋     | 15/32 [11:29<14:51, 52.46s/it]Evaluating:  50%|█████     | 16/32 [12:30<14:38, 54.91s/it]Evaluating:  53%|█████▎    | 17/32 [13:34<14:24, 57.64s/it]Evaluating:  56%|█████▋    | 18/32 [13:59<11:09, 47.79s/it]Evaluating:  59%|█████▉    | 19/32 [14:30<09:15, 42.69s/it]Evaluating:  62%|██████▎   | 20/32 [14:55<07:30, 37.56s/it]Evaluating:  66%|██████▌   | 21/32 [15:09<05:33, 30.30s/it]Evaluating:  69%|██████▉   | 22/32 [15:23<04:14, 25.46s/it]Evaluating:  72%|███████▏  | 23/32 [16:21<05:16, 35.15s/it]Evaluating:  75%|███████▌  | 24/32 [16:49<04:25, 33.14s/it]Evaluating:  78%|███████▊  | 25/32 [17:10<03:26, 29.55s/it]Evaluating:  81%|████████▏ | 26/32 [17:36<02:50, 28.41s/it]Evaluating:  84%|████████▍ | 27/32 [18:46<03:24, 40.87s/it]Evaluating:  88%|████████▊ | 28/32 [19:17<02:32, 38.01s/it]Evaluating:  91%|█████████ | 29/32 [19:25<01:26, 28.89s/it]Evaluating:  94%|█████████▍| 30/32 [19:43<00:51, 25.63s/it]Evaluating:  97%|█████████▋| 31/32 [20:06<00:24, 24.91s/it]Evaluating: 100%|██████████| 32/32 [20:21<00:00, 21.92s/it]Evaluating: 100%|██████████| 32/32 [20:21<00:00, 38.17s/it]
+Model evaluated: /home/ma-user/work/step-distillation/models
+Results saved to: /home/ma-user/work/step-distillation/eval/eval_results/gsm8k_eval_maxlen1024_thr0.9_bs8_20251111_162654.jsonl_rank*
+Accuracy: 78.12% (200/256)
+Avg block decode iterations per sample: 43.698
+Accuracy metrics saved to: /home/ma-user/work/step-distillation/eval/eval_results/accuracy_maxlen1024_thr0.9_bs8_20251111_162654.json
+✓ 评估 #6 完成！
+
+========================================
+所有评估完成！
+总计完成: 6/6 个评估
+结果保存在: /home/ma-user/work/step-distillation/eval/eval_results
+========================================
+
+生成结果汇总...
+汇总文件已保存: /home/ma-user/work/step-distillation/eval/eval_results/evaluation_summary_20251111_164847.txt
+评估结果汇总
+评估时间: Tue Nov 11 16:48:47 CST 2025
+========================================
+
+Max Gen Length: 256
+----------------------------------------
+  Threshold 0.6: 47.27% | Avg Loops: 29.375
+  Threshold 0.9: 52.73% | Avg Loops: 46.734375
+
+Max Gen Length: 512
+----------------------------------------
+  Threshold 0.6: 68.75% | Avg Loops: 27.997879028320312
+  Threshold 0.9: 74.61% | Avg Loops: 44.63418960571289
+
+Max Gen Length: 1024
+----------------------------------------
+  Threshold 0.6: 71.09% | Avg Loops: 27.182525634765625
+  Threshold 0.9: 78.12% | Avg Loops: 43.69844055175781
+

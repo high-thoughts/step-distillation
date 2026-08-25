@@ -1,0 +1,19 @@
+{
+  "model": "/home/ma-user/work/step-distillation/models",
+  "checkpoint_path": "base_model",
+  "timestamp": "2025-11-11 15:42:15",
+  "accuracy": 0.52734375,
+  "accuracy_percent": "52.73%",
+  "correct": 135,
+  "total": 256,
+  "avg_block_decode_iterations_per_sample": 46.734375,
+  "hyperparameters": {
+    "max_gen_length": 256,
+    "block_length": 64,
+    "threshold": 0.9,
+    "batch_size": 16,
+    "num_few_shot": 0,
+    "dtype": "bfloat16",
+    "subsample": 256
+  }
+}

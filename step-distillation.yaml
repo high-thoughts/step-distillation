@@ -1,0 +1,58 @@
+# 模型配置
+model_path: "/home/ma-user/work/step-distillation/models"
+ref_model_path: "/home/ma-user/work/step-distillation/models"
+trust_remote_code: true
+use_liger: false
+
+# LoRA 配置
+lora_rank: 32
+lora_alpha: 64
+target_modules:
+  - "q_proj"
+  - "k_proj"
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+
+# 数据配置
+train_files: ["datasets/gsm8k/train.parquet"]
+val_files: ["datasets/gsm8k/test.parquet"]
+prompt_key: "question"
+response_key: "answer"
+max_length: 256
+truncation: true
+train_batch_size: 4
+micro_batch_size: 8
+gradient_accumulation_steps: 1
+
+# 蒸馏配置
+block_length: 64
+threshold_high: 0.9
+threshold_low: 0.6
+max_gen_length: 512
+train_eos_token_id: 126081
+infer_eos_token_id: 126348
+beta: 0.1
+
+# 训练配置
+lr: 1e-5
+betas: [0.9, 0.999] # YAML 格式的元组
+weight_decay: 0.01
+warmup_ratio: 0.01
+clip_grad: 1.0 # 仍将用于 accelerator.clip_grad_norm_
+total_epochs: 1
+gradient_checkpointing: false
+mixed_precision: 'bf16' # <-- 解决冲突：从这里驱动精度
+
+# 保存配置
+save_steps: 32
+val_step: 300000
+output_dir: "./output/"
+
+# 追踪与断点续训
+use_wandb: true           # 开启后使用 W&B 记录训练
+wandb_project: "step-distillation"  # W&B 项目名
+wandb_run_name: "test_8npu"        # 可选：自定义 run 名称
+resume_from_checkpoint: null # 可选：可填路径或 "latest" 以自动读取最近一次
